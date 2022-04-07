@@ -1,0 +1,30 @@
+[package]
+name = "svg-gpu-tessellation-renderer"
+description = "An SVG tessellation based renderer using GPU buffers."
+version = "0.1.0"
+authors = ["Spencer Imbleau <spencer@imbleau.com>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/simbleau/svg-gpu-tessellation-renderer"
+
+[lib]
+name = "svg_renderer"
+path = "src/lib.rs"
+
+[[bin]]
+name = "svg_renderer"
+path = "src/main.rs"
+
+[dependencies]
+clap = "2.33.3"
+lyon = {version ="0.17.5", features = ["extra"]}
+usvg = "0.22.0"
+serde = { version = "1.0.130", features = ["derive"] }
+walkdir = "2"
+csv = "1.1"
+winit = "0.26.1"
+log = "0.4"
+wgpu = "0.12.0"
+pollster = "0.2"
+bytemuck = "1.2.0"
+thiserror = "1.0.30"
