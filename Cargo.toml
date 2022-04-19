@@ -1,19 +1,19 @@
 [package]
-name = "svg-gpu-tessellation-renderer"
-description = "An SVG tessellation based renderer using GPU buffers."
+name = "svg-tessellation-renderer"
+description = "An tessellation based renderer to render SVG files using hardware-acceleration."
 version = "0.1.0"
 authors = ["Spencer Imbleau <spencer@imbleau.com>"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/simbleau/svg-gpu-tessellation-renderer"
+repository = "https://github.com/kurbos/svg-tessellation-renderer"
 
 [lib]
-name = "svg_renderer"
+name = "svg_tessellation_renderer"
 path = "src/lib.rs"
 
 [[bin]]
-name = "svg_renderer"
-path = "src/main.rs"
+name = "svg_tessellation_renderer"
+path = "src/bin.rs"
 
 [dependencies]
 clap = "2.33.3"

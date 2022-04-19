@@ -1,6 +1,6 @@
 use clap::{App, Arg};
 use std::path::PathBuf;
-use svg_renderer::TriangleRenderer;
+use svg_tessellation_renderer::TriangleRenderer;
 
 fn main() {
     let app = App::new("SVG Tessellation Renderer")
@@ -18,7 +18,7 @@ fn main() {
 
     // Get file
     let file_path: &PathBuf = &app.value_of("input").unwrap().into();
-    let source = std::fs::read(file_path).unwrap();
+    let source = std::fs::read(file_path).expect("Input file cannot be read");
     let svg_contents = String::from_utf8(source).unwrap();
     // Run demo
     let mut renderer = TriangleRenderer::new();
