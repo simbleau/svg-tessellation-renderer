@@ -16,15 +16,15 @@ name = "svg_tessellation_renderer"
 path = "src/bin.rs"
 
 [dependencies]
-clap = "2.33.3"
-lyon = {version ="0.17.5", features = ["extra"]}
+clap = "2.34.0"
+lyon = {version ="0.17.10", features = ["extra"]}
 usvg = "0.22.0"
-serde = { version = "1.0.130", features = ["derive"] }
+serde = { version = "1.0.136", features = ["derive"] }
 walkdir = "2"
 csv = "1.1"
 winit = "0.26.1"
 log = "0.4"
 wgpu = "0.12.0"
 pollster = "0.2"
-bytemuck = "1.2.0"
+bytemuck = "1.9.1"
 thiserror = "1.0.30"
