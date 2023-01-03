@@ -21,16 +21,6 @@ pub struct TriangleRenderer {
 }
 
 impl TriangleRenderer {
-    #[cfg(target_os = "windows")]
-    fn get_event_loop() -> EventLoop<()> {
-        winit::platform::windows::EventLoopExtWindows::new_any_thread()
-    }
-
-    #[cfg(target_os = "unix")]
-    fn get_event_loop() -> EventLoop<()> {
-        winit::platform::unix::EventLoopExtUnix::new_any_thread()
-    }
-
     pub fn new() -> Self {
         TriangleRenderer {
             window: None,
