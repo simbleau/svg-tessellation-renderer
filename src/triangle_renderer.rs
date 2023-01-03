@@ -65,7 +65,7 @@ impl TriangleRenderer {
         data: TessellationData,
     ) -> Result<()> {
         let event_loop_thread: EventLoop<()> =
-            winit::platform::unix::EventLoopExtUnix::new_any_thread();
+            winit::event_loop::EventLoop::new();
         let window = WindowBuilder::new().build(&event_loop_thread)?;
         window.set_resizable(true);
         window.set_title("Render-Kit");
